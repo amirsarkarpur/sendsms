@@ -31,7 +31,7 @@ class send(APIView):
             sms = api.sms()
             to = sender.phone_number
             _from = '50002710011290'
-            text = f'اقای {sender.first_name} ورود شما را به سایت تاوا پی سی خوش آمد میگوییم'
+            text = f' سلام جناب {sender.last_name} عزیزوقت بخیر به کافی نت «تاوا پی سی» خوش اومدید برای دریافت آخرین خبرها و ثبت نام ها روی لینک زیر کلیک کنین :https://eitaa.com/tavapc_cofeenet'
             response = sms.send(to, _from, text)
             print(response)
 
