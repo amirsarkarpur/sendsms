@@ -10,8 +10,7 @@ class give_data (models.Model):
         max_length=11,
         validators=[
             RegexValidator(r'^09\d{9}$', 'شماره موبایل باید با 09 شروع شود و 11 رقم باشد.')
-        ],
-        unique=True
+        ]
     )
 
     def __str__(self) :
