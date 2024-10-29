@@ -17,3 +17,4 @@ class give_data (models.Model):
     def __str__(self) :
         name = self.first_name +" "+ self.last_name
         return name
+
