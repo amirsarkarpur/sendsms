@@ -42,9 +42,7 @@ class send(APIView):
 class SmsList(APIView):
 
     def get(self, request):
-        
         sms_list = give_data.objects.all()
-        serializer = give_data(sms_list,many=True)
+        serializer = getdata(sms_list, many=True) 
 
         return Response(serializer.data)
-
