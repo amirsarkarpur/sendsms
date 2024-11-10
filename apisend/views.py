@@ -37,3 +37,14 @@ class send(APIView):
 
             return Response(serializer.data, status=status.HTTP_201_CREATED)  # ایجاد موفق
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  # خطای اعتبارسنجی
+
+@method_decorator(csrf_exempt, name='dispatch')
+class ShowLogView(APIView):
+
+    def get(self, request):
+        
+        sms_list = give_data.objects.all()
+        serializer = give_data(sms_list,many=True)
+
+        return Response(serializer.data)
+

@@ -7,3 +7,4 @@ class getdata(serializers.ModelSerializer):
         fields = ['id','first_name','last_name','phone_number']
         read_only_fields = ['id']
         
+
