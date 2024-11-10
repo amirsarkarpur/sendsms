@@ -39,7 +39,7 @@ class send(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  # خطای اعتبارسنجی
 
 @method_decorator(csrf_exempt, name='dispatch')
-class ShowLogView(APIView):
+class SmsList(APIView):
 
     def get(self, request):
         
